@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Elora's Haven — intentional nail care in Sage Hill, Calgary. Structured manicures, Gel-X extensions and proper Nigerian pedicures, focused on strong, natural nails. Book online." />
+    <link rel="icon" href="data:," />
+    <title>Elora's Haven — Nail Studio in Sage Hill, Calgary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --cream: #fbf7ef;
+        --cream-2: #f3ecdc;
+        --card: #fffdf8;
+        --ink: #26332b;
+        --ink-soft: #55665b;
+        --sage: #4a7a5f;
+        --sage-deep: #1f3a2e;
+        --sage-dark: #16291f;
+        --sage-tint: #e3eee6;
+        --sage-mist: #d9e8dd;
+        --gold: #c9a35c;
+        --gold-deep: #a97f38;
+        --line: #e5dcc6;
+        --star: #e8930c;
+        --shadow: 0 10px 30px rgba(38, 51, 43, 0.10);
+        --shadow-sm: 0 4px 14px rgba(38, 51, 43, 0.08);
+        --radius: 20px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --cream: #141d17;
+          --cream-2: #1a2620;
+          --card: #1e2d25;
+          --ink: #f0ead9;
+          --ink-soft: #b6c4b9;
+          --sage: #7db393;
+          --sage-deep: #1f3a2e;
+          --sage-dark: #16291f;
+          --sage-tint: #243d2f;
+          --sage-mist: #d9e8dd;
+          --gold: #d4b36f;
+          --gold-deep: #d4b36f;
+          --line: #31443a;
+          --star: #f2b04a;
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+          --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "Nunito", system-ui, sans-serif;
+        font-size: 17px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; line-height: 1.15; margin: 0; }
+      p { margin: 0; }
+      a { color: var(--sage); }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      section { padding: 72px 0; }
+      .section-head { max-width: 640px; margin-bottom: 36px; }
+      .section-head h2 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); color: var(--ink); margin-bottom: 10px; }
+      .section-head p { color: var(--ink-soft); font-size: 1.05rem; }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+        min-height: 52px; padding: 12px 26px; border-radius: 999px;
+        font-family: "Nunito", sans-serif; font-weight: 800; font-size: 1.02rem;
+        text-decoration: none; border: 2px solid transparent; cursor: pointer;
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      .btn:active { transform: scale(0.98); }
+      .btn-book { background: var(--gold); color: #2a2113; box-shadow: var(--shadow-sm); }
+      .btn-book:hover { background: var(--gold-deep); color: #fff; }
+      .btn-call { background: var(--sage-deep); color: #fff; box-shadow: var(--shadow-sm); }
+      .btn-call:hover { background: var(--sage-dark); }
+      .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.85); }
+      .btn-ghost:hover { background: rgba(255,255,255,0.12); }
+      .btn-ghost-dark { background: transparent; color: var(--sage); border-color: var(--sage); }
+      .btn-ghost-dark:hover { background: var(--sage-tint); }
+      .btn svg { width: 19px; height: 19px; flex: none; }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        padding: 0;
+        background:
+          radial-gradient(ellipse 90% 70% at 85% 10%, rgba(201, 163, 92, 0.28) 0%, rgba(201, 163, 92, 0) 60%),
+          radial-gradient(ellipse 70% 90% at 0% 100%, rgba(74, 122, 95, 0.45) 0%, rgba(74, 122, 95, 0) 55%),
+          linear-gradient(155deg, #16291f 0%, #1f3a2e 55%, #24473a 100%);
+        color: #ffffff;
+      }
+      .hero-grid {
+        display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 0;
+        max-width: 1220px; margin: 0 auto; align-items: stretch;
+      }
+      .hero-copy { padding: 72px 48px 72px 20px; display: flex; flex-direction: column; justify-content: center; }
+      .hero-eyebrow {
+        display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+        background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px;
+        padding: 6px 14px; font-size: 0.85rem; font-weight: 800; color: #d9e8dd;
+        margin-bottom: 22px;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.55);
+      }
+      .hero h1 {
+        font-size: clamp(2.7rem, 6vw, 4.2rem); color: #ffffff; margin-bottom: 16px; font-weight: 400;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.55);
+      }
+      .hero h1 .accent { color: #e6c98a; }
+      .hero-sub {
+        font-size: 1.15rem; color: #f2f6f2; font-weight: 600; max-width: 30em; margin-bottom: 26px;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.55);
+      }
+      .rating-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 30px; }
+      .stars { display: inline-flex; gap: 2px; }
+      .stars svg { width: 22px; height: 22px; fill: #f2b04a; }
+      .rating-text { font-weight: 800; font-size: 1.02rem; color: #ffffff; text-shadow: 0 1px 4px rgba(0,0,0,0.55); }
+      .rating-text span { color: #d9e8dd; font-weight: 700; }
+      .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+      .hero-visual {
+        position: relative; min-height: 420px; overflow: hidden;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .hero-visual .leaf-ring {
+        width: 300px; height: 300px; border-radius: 50%;
+        border: 1px solid rgba(230, 201, 138, 0.45);
+        display: flex; align-items: center; justify-content: center;
+        position: relative;
+      }
+      .hero-visual .leaf-ring::before {
+        content: ""; position: absolute; inset: 22px; border-radius: 50%;
+        border: 1px dashed rgba(217, 232, 221, 0.35);
+      }
+      .hero-visual .leaf-ring::after {
+        content: ""; position: absolute; inset: -26px; border-radius: 50%;
+        border: 1px solid rgba(230, 201, 138, 0.18);
+      }
+      .hero-visual .monogram {
+        font-family: "DM Serif Display", Georgia, serif;
+        font-size: 7.5rem; line-height: 1; color: #e6c98a;
+        text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+      }
+      .hero-visual .leaf-caption {
+        position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+        font-size: 0.82rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+        color: #d9e8dd; white-space: nowrap; text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      }
+
+      /* ---------- Proof strip ---------- */
+      .facts { padding: 0; margin-top: -1px; }
+      .facts-inner {
+        display: grid; grid-template-columns: repeat(4, 1fr);
+        background: var(--sage-deep); color: #fff;
+      }
+      .fact { padding: 26px 16px; text-align: center; }
+      .fact + .fact { border-left: 1px solid rgba(255,255,255,0.18); }
+      .fact .num { font-family: "DM Serif Display", serif; font-size: 1.9rem; line-height: 1.1; display: block; }
+      .fact .lbl { font-size: 0.88rem; font-weight: 700; opacity: 0.88; }
+
+      /* ---------- Services ---------- */
+      .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .service-card {
+        background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 28px 24px; box-shadow: var(--shadow-sm);
+      }
+      .service-icon {
+        width: 52px; height: 52px; border-radius: 14px; background: var(--sage-tint);
+        display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+      }
+      .service-icon svg { width: 26px; height: 26px; stroke: var(--sage); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .service-card h3 { font-size: 1.28rem; margin-bottom: 8px; }
+      .service-card p { color: var(--ink-soft); font-size: 0.98rem; }
+      .services-note {
+        margin-top: 24px; background: var(--sage-tint); border-radius: var(--radius);
+        padding: 22px 26px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+      }
+      .services-note p { flex: 1 1 320px; font-weight: 600; }
+      .services-note strong { color: var(--sage); }
+
+      /* ---------- Approach ---------- */
+      .about { background: var(--cream-2); }
+      .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+      .about-copy h2 { font-size: clamp(1.9rem, 4.5vw, 2.6rem); margin-bottom: 16px; }
+      .about-copy p { color: var(--ink-soft); margin-bottom: 14px; }
+      .about-copy p strong { color: var(--ink); }
+      .about-copy blockquote {
+        margin: 22px 0 0; padding: 20px 24px; border-left: 4px solid var(--gold);
+        background: var(--card); border-radius: 0 var(--radius) var(--radius) 0;
+        font-family: "DM Serif Display", Georgia, serif; font-size: 1.25rem; line-height: 1.45; color: var(--ink);
+        box-shadow: var(--shadow-sm);
+      }
+      .about-points { display: grid; gap: 14px; }
+      .about-point {
+        background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+        padding: 20px 22px; box-shadow: var(--shadow-sm);
+        display: flex; gap: 14px; align-items: flex-start;
+      }
+      .about-point .dot {
+        flex: none; width: 34px; height: 34px; border-radius: 50%;
+        background: var(--sage-tint); color: var(--sage);
+        display: flex; align-items: center; justify-content: center;
+        font-family: "DM Serif Display", serif; font-size: 1.05rem;
+      }
+      .about-point h3 { font-size: 1.12rem; margin-bottom: 3px; font-family: "Nunito", sans-serif; font-weight: 800; }
+      .about-point p { color: var(--ink-soft); font-size: 0.96rem; }
+
+      /* ---------- Reviews ---------- */
+      .reviews { background: var(--sage-deep); color: #fff; text-align: center; }
+      .reviews .score { font-family: "DM Serif Display", serif; font-size: clamp(4.5rem, 12vw, 7rem); line-height: 1; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+      .reviews .stars { justify-content: center; margin: 14px 0 10px; }
+      .reviews .stars svg { width: 34px; height: 34px; fill: #e6c98a; }
+      .reviews h2 { color: #fff; font-size: clamp(1.7rem, 4vw, 2.3rem); margin-bottom: 10px; text-shadow: 0 1px 6px rgba(0,0,0,0.45); }
+      .reviews p { opacity: 0.92; max-width: 34em; margin: 0 auto; }
+      .reviews .btn { margin-top: 28px; }
+
+      /* ---------- Visit ---------- */
+      .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+      .visit-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 28px; }
+      .visit-card h3 { font-size: 1.35rem; margin-bottom: 18px; }
+      .hours-note { font-size: 1.05rem; color: var(--ink-soft); }
+      .hours-note strong { color: var(--ink); }
+      .hours-note .btn { margin-top: 20px; }
+      .contact-lines { display: grid; gap: 14px; margin-bottom: 22px; }
+      .contact-line { display: flex; gap: 12px; align-items: flex-start; }
+      .contact-line svg { width: 21px; height: 21px; flex: none; margin-top: 3px; stroke: var(--sage); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .contact-line .k { font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); }
+      .contact-line a { font-weight: 800; text-decoration: none; }
+      .contact-line a:hover { text-decoration: underline; }
+      .contact-line .v { font-weight: 800; }
+
+      /* ---------- Final CTA ---------- */
+      .cta-band { background: var(--cream-2); text-align: center; }
+      .cta-band h2 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 12px; }
+      .cta-band p { color: var(--ink-soft); max-width: 32em; margin: 0 auto 28px; }
+      .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+      /* ---------- Footer ---------- */
+      footer { background: var(--sage-dark); color: #e8f0e9; padding: 40px 0 48px; }
+      .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+      footer .fname { font-family: "DM Serif Display", serif; font-size: 1.4rem; color: #fff; }
+      footer p { font-size: 0.95rem; opacity: 0.85; }
+      footer a { color: #e6c98a; font-weight: 800; text-decoration: none; }
+      footer a:hover { text-decoration: underline; }
+      .footer-note { width: 100%; font-size: 0.82rem; opacity: 0.6; margin-top: 8px; }
+
+      /* ---------- Sticky mobile bar ---------- */
+      .sticky-bar { display: none; }
+      @media (max-width: 760px) {
+        body { padding-bottom: 74px; }
+        .sticky-bar {
+          display: flex; align-items: center; gap: 12px;
+          position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+          background: var(--card); border-top: 1px solid var(--line);
+          padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+          box-shadow: 0 -6px 20px rgba(38, 51, 43, 0.12);
+        }
+        .sticky-bar .sname { font-family: "DM Serif Display", serif; font-size: 1.02rem; line-height: 1.15; }
+        .sticky-bar .srate { font-size: 0.8rem; font-weight: 800; color: var(--ink-soft); display: flex; align-items: center; gap: 4px; }
+        .sticky-bar .srate svg { width: 14px; height: 14px; fill: var(--star); }
+        .sticky-bar .btn { margin-left: auto; min-height: 46px; padding: 10px 20px; font-size: 0.98rem; }
+      }
+
+      /* ---------- Responsive ---------- */
+      @media (max-width: 900px) {
+        .services-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 760px) {
+        section { padding: 52px 0; }
+        .hero-grid { grid-template-columns: 1fr; }
+        .hero-copy { padding: 44px 20px 36px; }
+        .hero-visual { min-height: 260px; order: -1; }
+        .hero-visual .leaf-ring { width: 200px; height: 200px; }
+        .hero-visual .monogram { font-size: 5rem; }
+        .hero-visual .leaf-caption { bottom: 14px; }
+        .facts-inner { grid-template-columns: repeat(2, 1fr); }
+        .fact:nth-child(3) { border-left: none; }
+        .fact:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,0.18); }
+        .about-grid { grid-template-columns: 1fr; gap: 28px; }
+        .visit-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 540px) {
+        .hero-actions .btn { flex: 1 1 auto; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="hero-eyebrow">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Sage Hill · Calgary
+          </span>
+          <h1>Elora&rsquo;s<br /><span class="accent">Haven</span></h1>
+          <p class="hero-sub">Intentional nail care that prioritizes health and beauty — structured manicures, Gel-X and detailed services focused on strong, natural nails.</p>
+          <div class="rating-row" aria-label="Rated 5.0 out of 5 stars from 28 reviews">
+            <span class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            </span>
+            <span class="rating-text">5.0 <span>· 28 reviews</span></span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-book" href="https://elorashaven.setmore.com/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Book an Appointment
+            </a>
+            <a class="btn btn-ghost" href="#services">See Services</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="leaf-ring"><span class="monogram">E</span></div>
+          <span class="leaf-caption">Health + Beauty · Strong Natural Nails</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ PROOF STRIP ============ -->
+    <section class="facts" aria-label="At a glance">
+      <div class="facts-inner">
+        <div class="fact"><span class="num">5.0 ★</span><span class="lbl">28 reviews</span></div>
+        <div class="fact"><span class="num">By appointment</span><span class="lbl">Book online</span></div>
+        <div class="fact"><span class="num">Sage Hill</span><span class="lbl">NW Calgary</span></div>
+        <div class="fact"><span class="num">Gel-X</span><span class="lbl">&amp; structured manicures</span></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Services, done with intention</h2>
+          <p>Every service starts with the health of your natural nails — then builds the look you want on top of a strong foundation.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2c-2.5 3-4 5.5-4 8.5A4.5 4.5 0 0 0 12.5 15 4.5 4.5 0 0 0 17 10.5C17 7.5 15.5 5 12 2z"/><path d="M12 15v7"/></svg>
+            </div>
+            <h3>Structured Manicures</h3>
+            <p>Careful, detailed manicures built around your natural nail — shaped, strengthened and finished to last, with the health of the nail first.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 3h8l-1 18H9L8 3z"/><path d="M10 7h4M10 11h4M10 15h4"/></svg>
+            </div>
+            <h3>Gel-X Extensions</h3>
+            <p>Soft-gel extensions for length and shape, applied with care so your natural nails stay strong underneath.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <h3>Detailed Nail Art &amp; Services</h3>
+            <p>Detailed, considered work — from clean, polished finishes to intricate nail art, tailored to you.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 16c2 1.5 4 2 8 2s6-.5 8-2"/><path d="M6 12c1.5 1 3.5 1.5 6 1.5S16.5 13 18 12"/><circle cx="12" cy="7" r="2.5"/></svg>
+            </div>
+            <h3>Nigerian Pedicures</h3>
+            <p>Proper Nigerian pedicures done right — thorough, unhurried care that leaves your feet feeling genuinely renewed.</p>
+          </article>
+        </div>
+        <div class="services-note">
+          <p>Not sure what to book? <strong>Reach out and we&rsquo;ll help you choose the right service for your nails.</strong></p>
+          <a class="btn btn-call" href="tel:+13679988000">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (367) 998-8000
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH ============ -->
+    <section class="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="about-copy">
+            <h2>A haven for your nails</h2>
+            <p>Elora&rsquo;s Haven is a nail studio in Sage Hill, Calgary, run by owner <strong>Ibe</strong>. The approach is simple: intentional care that puts the health of your natural nails first, and beauty second — never the other way around.</p>
+            <p>No rushing, no shortcuts. Just detailed work, honest care and nails that stay strong between visits.</p>
+            <blockquote>&ldquo;Intentional nail care that prioritizes health + beauty. Structured manicures, Gel-X, and detailed services focused on strong, natural nails. Proper Nigerian pedicures done right.&rdquo;</blockquote>
+          </div>
+          <div class="about-points">
+            <div class="about-point">
+              <span class="dot" aria-hidden="true">1</span>
+              <div><h3>Health first</h3><p>Every service is planned around keeping your natural nails strong and healthy.</p></div>
+            </div>
+            <div class="about-point">
+              <span class="dot" aria-hidden="true">2</span>
+              <div><h3>Detailed by design</h3><p>Unhurried, precise work — from shaping to finish, the detail is the point.</p></div>
+            </div>
+            <div class="about-point">
+              <span class="dot" aria-hidden="true">3</span>
+              <div><h3>A calm space</h3><p>A quiet, welcoming studio in Sage Hill where your appointment is really yours.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="reviews">
+      <div class="wrap">
+        <div class="score">5.0</div>
+        <div class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+        </div>
+        <h2>Loved by clients in Sage Hill</h2>
+        <p>Rated 5.0 out of 5 stars across 28 reviews — a small studio with a loyal following.</p>
+        <a class="btn btn-book" href="https://elorashaven.setmore.com/" target="_blank" rel="noopener">Book Your Visit</a>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section id="visit">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Visit the studio</h2>
+          <p>By appointment — book online in a couple of minutes, or call if you&rsquo;d rather talk it through first.</p>
+        </div>
+        <div class="visit-grid">
+          <div class="visit-card">
+            <h3>Hours</h3>
+            <p class="hours-note"><strong>By appointment · Book online.</strong><br />See live availability and book your time on our booking page.</p>
+            <a class="btn btn-book" href="https://elorashaven.setmore.com/" target="_blank" rel="noopener">See Availability &amp; Book</a>
+          </div>
+          <div class="visit-card">
+            <h3>Contact</h3>
+            <div class="contact-lines">
+              <div class="contact-line">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <div class="k">Studio</div>
+                  <div class="v">#2150 3950 Sage Hill Dr NW<br />Calgary, AB</div>
+                </div>
+              </div>
+              <div class="contact-line">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <div class="k">Phone</div>
+                  <a href="tel:+13679988000">(367) 998-8000</a>
+                </div>
+              </div>
+              <div class="contact-line">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                <div>
+                  <div class="k">Email</div>
+                  <a href="mailto:elorashaven@gmail.com">elorashaven@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-line">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                <div>
+                  <div class="k">Instagram</div>
+                  <a href="https://www.instagram.com/ElorasHaven" target="_blank" rel="noopener">@ElorasHaven</a>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-call" href="https://elorashaven.setmore.com/" target="_blank" rel="noopener">Book Online</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="cta-band">
+      <div class="wrap">
+        <h2>Your nails, cared for properly</h2>
+        <p>Strong, natural nails and a calm hour that&rsquo;s all yours. Book your appointment at Elora&rsquo;s Haven today.</p>
+        <div class="cta-actions">
+          <a class="btn btn-book" href="https://elorashaven.setmore.com/" target="_blank" rel="noopener">Book an Appointment</a>
+          <a class="btn btn-ghost-dark" href="tel:+13679988000">Call (367) 998-8000</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="wrap">
+        <div class="footer-inner">
+          <div>
+            <div class="fname">Elora&rsquo;s Haven</div>
+            <p>Nail studio · Sage Hill, Calgary<br />#2150 3950 Sage Hill Dr NW, Calgary, AB</p>
+          </div>
+          <div>
+            <p><a href="https://elorashaven.setmore.com/" target="_blank" rel="noopener">Book online</a> · <a href="tel:+13679988000">(367) 998-8000</a><br /><a href="mailto:elorashaven@gmail.com">elorashaven@gmail.com</a> · <a href="https://www.instagram.com/ElorasHaven" target="_blank" rel="noopener">@ElorasHaven</a></p>
+          </div>
+        </div>
+        <p class="footer-note">Concept demo prepared for Elora&rsquo;s Haven</p>
+      </div>
+    </footer>
+
+    <!-- ============ STICKY MOBILE BAR ============ -->
+    <div class="sticky-bar">
+      <div>
+        <div class="sname">Elora&rsquo;s Haven</div>
+        <div class="srate"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>5.0 · 28 reviews</div>
+      </div>
+      <a class="btn btn-book" href="https://elorashaven.setmore.com/" target="_blank" rel="noopener">Book Now</a>
+    </div>
+
+  </body>
+</html>
